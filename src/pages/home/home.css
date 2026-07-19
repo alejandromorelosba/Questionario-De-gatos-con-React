@@ -15,39 +15,42 @@
   --border: rgba(220, 214, 203, 1);
 }
 
-*,*::before,*::after {
-    box-sizing: border-box;
-}
-        /**se ha ralizado la configuracion base de body**/
-body{
-    margin:0;
-    padding:0;
-    background-color: var(--background);
-    line-height: 1.6;
-    font-family: georgia, serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-        /** diseño del header**/
-header{
-    color: var(--text);
-    background-color: var(--primary);
-    font-size: 24px;
-    justify-content: center;
-    text-align: center;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--border);
+/** se ha realizado la configuracion base de body **/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  line-height: 1.6;
+  font-family: georgia, serif;
 }
 
-        /** se ha diseñado el de footer**/
-footer{
-    background-color: var(--secondary);
-    font-size: 18px;
-    justify-content: center;
-    text-align: center;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--border);
+/** diseño del header **/
+header {
+  color: var(--text);
+  background-color: var(--primary);
+  font-size: 24px;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+
+/** se ha diseñado el de footer **/
+footer {
+  background-color: var(--secondary);
+  font-size: 18px;
+  justify-content: center;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
 }

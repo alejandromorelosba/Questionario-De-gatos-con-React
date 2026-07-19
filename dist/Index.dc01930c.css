@@ -1,0 +1,48 @@
+:root {
+  --background: #faf6ef;
+  --surface: #fffcf7;
+  --primary: #e67e22;
+  --secondary: #8b5e3c;
+  --accent: #f1c40f;
+  --success: #66bb6a;
+  --danger: #e74c3c;
+  --text: #343434;
+  --text-muted: #787878;
+  --border: #dcd6cb;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  font-family: georgia, serif;
+  line-height: 1.6;
+}
+
+header {
+  color: var(--text);
+  background-color: var(--primary);
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  justify-content: center;
+  margin: 5px;
+  padding: 10px;
+  font-size: 24px;
+}
+
+footer {
+  background-color: var(--secondary);
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  justify-content: center;
+  margin: 5px;
+  padding: 10px;
+  font-size: 18px;
+}
+/*# sourceMappingURL=Index.dc01930c.css.map */

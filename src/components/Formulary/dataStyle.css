@@ -1,0 +1,201 @@
+:root {
+  --color-bg: #dfeeef;
+  --color-container-bg: #2ab4be;
+  --color-title: #ffde00;
+  --color-text-light: #fff;
+  --color-text-dark: #000;
+  --color-highlight: #c6db48;
+  --color-highlight-dark: #b3c93e;
+  --color-accent: #f06226;
+  --color-accent-dark: #d3521e;
+  --color-correct: #4caf50;
+  --color-incorrect: #e53935;
+
+  --font-main: Arial, Helvetica, sans-serif;
+  --font-size-base: 14px;
+
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 25px;
+
+  --radius: 4px;
+  --transition: 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-light);
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  margin: 0;
+}
+
+.container {
+  width: 60%;
+  background: var(--color-container-bg);
+  margin: 20px auto;
+  overflow: auto;
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: var(--color-title);
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.description {
+  padding: 0;
+  margin-top: 5px;
+  padding-bottom: var(--spacing-sm);
+  color: var(--color-text-dark);
+  text-align: center;
+  border-bottom: var(--color-text-light) dashed 1px;
+}
+
+section {
+  min-height: 410px;
+}
+
+h3 {
+  color: var(--color-text-dark);
+}
+
+.result h3 {
+  background: var(--color-highlight);
+  padding: var(--spacing-sm);
+  margin: var(--spacing-sm) 0;
+  border-radius: var(--radius);
+}
+
+/* Lista de preguntas/respuestas */
+.result ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-text-light);
+  color: var(--color-text-dark);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: 8px;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.result li:hover {
+  transform: translateX(3px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.result li:last-child {
+  margin-bottom: 0;
+}
+
+.result li.correct {
+  border-left: 5px solid var(--color-correct);
+}
+
+.result li.incorrect {
+  border-left: 5px solid var(--color-incorrect);
+}
+
+/* Opciones de respuesta (radios/checkbox como botones) */
+.option {
+  display: block;
+  width: 100%;
+  background: var(--color-text-light);
+  color: var(--color-text-dark);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin-bottom: 8px;
+  cursor: pointer;
+  text-align: left;
+  font-size: var(--font-size-base);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.option:hover {
+  background: #f2f2f2;
+}
+
+.option.selected {
+  border-color: var(--color-accent);
+}
+
+.option.correct {
+  background: var(--color-correct);
+  color: var(--color-text-light);
+}
+
+.option.incorrect {
+  background: var(--color-incorrect);
+  color: var(--color-text-light);
+}
+
+/* Botones */
+.sendInfo {
+  background: var(--color-accent);
+  border: 0;
+  color: var(--color-text-light);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.sendInfo:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+.sendInfo:disabled {
+  background: #999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Barra de progreso opcional */
+.progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: var(--spacing-md);
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--color-highlight);
+  transition: width 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: var(--spacing-md);
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
